@@ -1,0 +1,122 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: linear-gradient(145deg, #002b5c, #001b34);
+    border: 2px solid #00ffcc;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Rainbow Moving Lights */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: rainbow 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Text Styling */
+h1, h2, p {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Animation Effect for Text */
+h1, h2, p {
+    animation: glowingText 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowingText {
+    0% {
+        text-shadow: 0 0 8px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(0, 255, 204, 1);
+    }
+    100% {
+        text-shadow: 0 0 8px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6);
+    }
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,117 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: linear-gradient(145deg, #002b5c, #001b34);
+    border: 2px solid #00ffcc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+/* Form Elements */
+input, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input {
+    background: #001f3f;
+    color: #fff;
+    border: 1px solid #00ffcc;
+}
+
+input:focus, button:focus {
+    outline: none;
+    border-color: #00ffcc;
+}
+
+button {
+    background: linear-gradient(145deg, #ffd700, #b29500);
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 12px 0;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #b29500, #ffd700);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+    transition: all 0.5s ease;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+/* Links */
+p a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #ffd700;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 500px;
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    input, button {
+        font-size: 18px;
+    }
+}
+
+/* Adding smooth transitions for input and button hover effects */
+input:hover, button:hover {
+    border-color: #00ffcc;
+}
+
+/* Accessibility improvements */
+input:focus {
+    background-color: #002b5c;
+}

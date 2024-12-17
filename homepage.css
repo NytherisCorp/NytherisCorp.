@@ -1,0 +1,193 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #001f3f, #2a3b67, #002b5c);
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #001f3f;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background: #00ffcc;
+    color: #001f3f;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #b49500, #002b5c);
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    animation: glowing 2s ease-in-out infinite;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+    animation: glowing 2s ease-in-out infinite;
+}
+
+.hero .btn-hero {
+    background: linear-gradient(145deg, #ffd700, #b29500);
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #ffd700;
+    transition: all 0.3s ease;
+}
+
+.hero .btn-hero:hover {
+    background: linear-gradient(145deg, #b29500, #ffd700);
+}
+
+/* Department Section */
+.departments {
+    padding: 60px 20px;
+    background: #001f3f;
+}
+
+.departments h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.department-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.department-card {
+    background: #003366;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffcc;
+    transition: all 0.3s ease;
+}
+
+.department-card h3 {
+    font-size: 24px;
+}
+
+.department-card p {
+    font-size: 16px;
+}
+
+.department-card a {
+    text-decoration: none;
+    color: #ffd700;
+}
+
+/* Department Icons */
+.department-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+/* Locked Department Styles */
+.locked {
+    border: 2px solid #ff4d4d;
+    position: relative;
+}
+
+.locked-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background: #003366;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-us .contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Footer Section */
+footer {
+    background: #001f3f;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Animations */
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    }
+    50% {
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d, 0 0 40px #ff4d4d;
+    }
+}

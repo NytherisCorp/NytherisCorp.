@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Account</h1>
+        <form action="#" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="date" name="dob" id="dob" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Re-enter Password" required>
+            <button type="submit" onclick="validateAge()">Sign Up</button>
+        </form>
+    </div>
+    <script>
+        function validateAge() {
+            const dob = new Date(document.getElementById('dob').value);
+            const age = new Date().getFullYear() - dob.getFullYear();
+            if (age < 12) {
+                alert("Age must be 12+");
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>

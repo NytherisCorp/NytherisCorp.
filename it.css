@@ -1,0 +1,149 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: linear-gradient(145deg, #002b5c, #001b34);
+    border: 2px solid #00ffcc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+}
+
+h1, h2, p {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Payment Options */
+.payment-option {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.payment-methods span {
+    margin-right: 10px;
+    color: #00ffcc;
+}
+
+/* Suggestion Box */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #002b5c;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ff0000;
+    background-color: #003c6e;
+}
+
+textarea::placeholder {
+    color: #ff0000;
+}
+
+textarea:hover {
+    background-color: #002b5c;
+}
+
+/* Red Animated Border for Suggestions */
+textarea:focus {
+    animation: borderAnimation 1s infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #ff0000;
+    }
+    50% {
+        border-color: #ff5e00;
+    }
+    100% {
+        border-color: #ff0000;
+    }
+}
+
+/* Button Styles */
+.submit-btn {
+    background: linear-gradient(145deg, #ffd700, #b29500);
+    color: #000;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(145deg, #b29500, #ffd700);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .submit-btn {
+        font-size: 18px;
+        padding: 14px 25px;
+    }
+
+    textarea {
+        font-size: 18px;
+    }
+}
